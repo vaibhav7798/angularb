@@ -1,0 +1,50 @@
+<h2>Data binding Component..</h2>
+<p>data-binding works!</p>
+
+<!-- 
+Data Binding in Angulars are 4 types:
+1:One Way Data Binding  EX:String Interpolation
+2:Two Way Data Binding
+3:Property Binding
+4:Event Binding -->
+
+{{mahadev}} <br> <!--string Interpolation--one way data binding--ts to html data transmission---> 
+{{data}}
+<br> <br>
+<input type="text" value="vaibhav"> <!--html normal way of value attribute-->
+<input type="text" value="myName"> <!---myName-->
+<input type="text" [value]="myName"> <!---vaibhav---type1---property binding---one way data binding--ts to html data transmission--->
+<input type="text" value={{myName}}> <!----vaibhav----type2-using s.interpolation--property binding--->
+
+<input type="text" disabled>
+<input type="text" [disabled]="disabled">  <!---disabled work on property binding--->
+<input type="text" disabled={{disabled}}>  <!---disabled does not work on string intterpolation--->
+<!--NOTE:property binding works on disabled attribute but string interpolation does not work on disabled attribute--->
+
+<br><br>
+
+{{city}} <!---property fetch/call--->
+<br>
+{{getValue()}} <!--function fetch/call--->
+<br>
+{{100+50}}  <!----s.interpolation will allow arithmetic operation-->
+<br>
+{{no==70}} <!---true--  equality operation can perform in s.interpolation--->
+<br>
+<!-- {{no=40}}  --we can not assign value to property in s.interpolation-- -->
+<br>
+<!-- {{typeof(no)}}  we can not use type of operator in s.interpolation -->
+<br>
+<!-- {{no++}}  increment/decrement can not work in s.interpolation -->
+
+
+<!----For 2 way data binding-->
+<!--for two way data binding we need to use ngModule directives so in cse we need to import FormsModule---->
+
+<input type="text" [(ngModel)]="surName">
+{{surName}}
+<br>
+{{changesurName()}}
+<p>vaibhav11 kabade..</p>
+
+

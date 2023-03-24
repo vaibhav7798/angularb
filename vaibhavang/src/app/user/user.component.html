@@ -1,0 +1,14 @@
+<h2>User Component..</h2>
+<p>user works!</p>
+Enter Name Here:<input type="text" #inputbox (keyup)="myFunction(inputbox.value)" (blur)="myBlur()">
+<button (click)="myFunction(inputbox.value)">click</button>
+{{myTempRef}} 
+   
+<div (mouseover)="myEvent()"> <!---mouseover event work on only input box-->
+    here mouse event....
+</div>
+<br>
+CheckBox1:<input type="checkbox" (change)="myEvChekBox()">
+<br>
+CheckBox2:<input type="checkbox" value="value_item1" (change)="myEvChekBox1($event)">
+
