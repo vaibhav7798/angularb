@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeModule } from './home/home.module';
+import { ContactusModule } from './contactus/contactus.module';
 
 @NgModule({
   declarations: [  //component+directives+pipes
     AppComponent,
     UserComponent,
     DataBindingComponent,
+    PageNotFoundComponent,
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    //HomeModule,
+    //ContactusModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

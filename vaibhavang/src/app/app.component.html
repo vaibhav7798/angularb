@@ -1,6 +1,7 @@
-<app-user></app-user>
+<!-- <app-user></app-user> -->
 
-<h2>app Component..</h2> <br>
+
+<!-- <h2>app Component..</h2> <br>
 
 <div class="main_container">
 <p>Shri Shivay Namstubhyam</p>
@@ -17,5 +18,19 @@
 <button (click)="test1()">click me</button><br>
 <!-- <h2>vaibhav</h2> -->
 
-<app-data-binding></app-data-binding>
-<h4>sri shivay Namstubhyam..</h4>
+<!-- <app-data-binding></app-data-binding> -->
+<h4>sri shivay Namstubhyam..</h4> 
+
+<button routerLink="/user">user component</button>  &nbsp;&nbsp;
+<button routerLink="/dataBinding">DataBinding</button>&nbsp;&nbsp;
+<a href="/user">anchor tag with href</a>&nbsp;&nbsp; <!---used of anchor tag with href in that case REFRESH page so data will lose so dont use anchor tag with href--->
+<a routerLink="/user">anchor tag with routerlink</a>&nbsp;&nbsp; <!----we can use anchor tag with routerlink bcoz not refresh page-->
+<!-- <button routerLink="/use">wlid/universal card routing</button>&nbsp;&nbsp; -->
+<button routerLink="/HomeModule_home">home</button>&nbsp;&nbsp;
+<button routerLink="HomeModule_landing">landing</button>&nbsp;&nbsp;
+<button routerLink="/home-module/landing">landing</button>&nbsp;&nbsp;
+<button routerLink="/home-module/home">home</button>&nbsp;&nbsp;
+<router-outlet></router-outlet>
+<!---------------------.....it is NORMAL ROUTING....-------------------------->
+
+<!-- <router-outlet></router-outlet> -->
