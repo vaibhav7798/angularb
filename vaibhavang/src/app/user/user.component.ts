@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class UserComponent {
 
    myTempRef:any;
-
+   city_name?:string;
   myFunction(vaibhav:any)
   {
     this.myTempRef=vaibhav;
@@ -35,6 +35,15 @@ myEvChekBox1(vaibhav:any)
 {
   console.log("Event:"+vaibhav.target.value);
 }
+ 
+constructor(private dataService:DataService)
+{
 
+}
+
+ngOnInit()//ng life cycle hook   called by implicity
+{
+   this.city_name=this.dataService.city;
+}
 }
 
