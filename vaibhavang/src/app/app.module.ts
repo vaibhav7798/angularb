@@ -21,7 +21,7 @@ import { ContactusModule } from './contactus/contactus.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    //HomeModule,
+    //HomeModule,  //egarly loaded
     //ContactusModule,
   ],
   providers: [],

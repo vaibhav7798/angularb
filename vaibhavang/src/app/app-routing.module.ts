@@ -14,8 +14,9 @@ const routes: Routes = [
  {path:'HomeModule_landing',component:LandingComponent},
  
  //lazy loading
- {path:'home-module',loadChildren :()=>import('./home/home.module').then(mod=>mod.HomeModule)}
-
+ {path:'home-module',loadChildren :()=>import('./home/home.module').then(mod=>mod.HomeModule)},
+ {path:'aboutus-module',loadChildren:()=>import('./aboutus/aboutus.module').then(mod=>mod.AboutusModule)},
+{ path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 
 ];
 

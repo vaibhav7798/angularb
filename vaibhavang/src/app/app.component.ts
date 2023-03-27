@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,10 @@ export class AppComponent {
   mySurname:string="kabade";//logcut
   myMiddleName? : string;
 
-  constructor() //it is a just function and it will call implicitly by compiler 
+  constructor(private router:Router) //dependency injection->private router:Router //it is a just function and it will call implicitly by compiler 
   {
     console.log("inside constructor...");
-    
-  }
+   }
 
   test()
   {
@@ -27,5 +27,16 @@ export class AppComponent {
    {
     this.test();
    }
+
+   redirectadmin() {
+   
+    this.router.navigateByUrl("/admin");  
+  
+  }
+
+  redirectaboutus_details()
+  {
+    this.router.navigateByUrl('aboutus-module/aboutusdetails');
+  }
 
 }

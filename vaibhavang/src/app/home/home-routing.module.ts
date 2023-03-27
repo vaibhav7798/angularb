@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 
 const routes: Routes = [
+  {path:'',component:LandingComponent},
   {path:'landing',component:LandingComponent},
   {path:'home',component:HomeComponent}
 ];
