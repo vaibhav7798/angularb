@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeModule } from './home/home.module';
 import { ContactusModule } from './contactus/contactus.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [  //component+directives+pipes
@@ -16,6 +17,7 @@ import { ContactusModule } from './contactus/contactus.module';
     UserComponent,
     DataBindingComponent,
     PageNotFoundComponent,
+    HeaderComponent,
   ],
   imports: [ //modules
     BrowserModule,

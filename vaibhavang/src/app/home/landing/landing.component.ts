@@ -10,6 +10,9 @@ export class LandingComponent {
 
   softwareCmp?:string;
   data:any;
+  fruits!:any;
+  fruits1!:any;
+  
   constructor(private dataService:DataService)
  {
 
@@ -18,10 +21,16 @@ export class LandingComponent {
  ngOnInit()//ng life cycle hook and called by implicitly
  {
        this.softwareCmp=this.dataService.softwareCmp;
+       this.fruits=this.dataService.fruits="apple";
  }
   //data fetch from dataservices using button click
- showData()
+ getData()
  {
     this.data=this.dataService.data;
+ }
+
+ setData()
+ {
+   this.fruits1=this.dataService.fruits="orange";
  }
 }

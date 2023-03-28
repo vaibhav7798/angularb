@@ -26,18 +26,28 @@
 <!-- <a href="/user">anchor tag with href</a>&nbsp;&nbsp; -used of anchor tag with href in that case REFRESH page so data will lose so dont use anchor tag with href- -->
 <!-- <a routerLink="/user">anchor tag with routerlink</a>&nbsp;&nbsp; --we can use anchor tag with routerlink bcoz not refresh page -->
 <!-- <button routerLink="/use">wlid/universal card routing</button>&nbsp;&nbsp; -->
-<button routerLink="/HomeModule_home">home</button>&nbsp;&nbsp; <!---way1---->
-<button routerLink="HomeModule_landing">landing</button>&nbsp;&nbsp;<!---way1---->
-<button routerLink="/home-module/landing">landing</button>&nbsp;&nbsp;<!---way2---with lazy loading--->
-<button routerLink="/home-module/home">home</button>&nbsp;&nbsp;<!---way2---with lazy loading--->
- <button routerLink="/home-module">initially landing</button>&nbsp;&nbsp;
+
+<!--11/3 recap-->
+<!--<button routerLink="/HomeModule_home">home</button>&nbsp;&nbsp; <!---way1---->
+<!--<button routerLink="HomeModule_landing">landing</button>&nbsp;&nbsp;<!---way1---->
+<!--<button routerLink="/home-module/landing">landing</button>&nbsp;&nbsp;<!---way2---with lazy loading--->
+<!--<button routerLink="/home-module/home">home</button>&nbsp;&nbsp;<!---way2---with lazy loading--->
+ <!--<button routerLink="/home-module">initially landing</button>&nbsp;&nbsp; -->
+
  <!-- <button routerLink="/aboutus-module">about us initially</button><br><br>
  <button routerLink="/aboutus-module/aboutusdetails">about us details</button>
  <button routerLink="/aboutus-module/aboutuslanding">aboutus landing</button><br><br>
  <button routerLink="/admin">admin initially</button>&nbsp;&nbsp;
  <button (click)="redirectadmin()">admin by .ts</button>
  <button (click)="redirectaboutus_details()">aboutus_details</button> -->
-<router-outlet></router-outlet>
+
+<!-- 11/3 recap 
+<button routerLink="/testModule">Test</button>&nbsp;&nbsp;
+<button routerLink="/testModule/test-contact">testcontact</button>&nbsp;&nbsp;
+<button routerLink="/testModule/test-home">testhome</button> -->
+
+<app-header></app-header>
+ <router-outlet></router-outlet>
 <!---------------------.....it is NORMAL ROUTING....-------------------------->
 
 <!-- <router-outlet></router-outlet> -->
