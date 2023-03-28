@@ -6,5 +6,12 @@ import { Injectable } from '@angular/core';
 export class DataService {
   carName='swift';
   city='i am live in Chalisgaon';
-  constructor() { }
+ softwareCmp='veritas software pvt ltd';
+  
+ data={
+   name:'vaibhav',
+   age:28,
+   address:'pune'
+ }
+ constructor() { }
 }

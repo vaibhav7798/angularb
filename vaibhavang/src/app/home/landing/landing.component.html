@@ -1,1 +1,7 @@
 <p>landing works!</p>
+{{softwareCmp}}<br><br>
+
+<button (click)="showData()">show datsrv_data</button>
+<div *ngIf="data"> <!----*ngIf is a directives which is used for condictionaly show and hide same element--->
+{{data.name}}     <!--we appplied if coddiction like ngIF if data is present in data only that time div elemnt will be enabled if data is not prenet in data that time div element will be disabled.------>
+</div>
