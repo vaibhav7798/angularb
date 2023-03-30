@@ -8,3 +8,60 @@
 <button (click)="hide()">hide</button>&nbsp;&nbsp;
 <button (click)="show1()">show</button>&nbsp;&nbsp;
 <button (click)="togglehideshow()">toggle</button>
+{{item}}
+
+<div *ngFor="let item of item"> <!---*ngfor directives---->
+<p>
+    {{item}}
+</p>
+</div>
+
+<div *ngIf="studentData">
+<ol type="a" *ngFor="let studentData of student"> <!---*ngFor directives---->
+    <li>{{studentData.name}}</li>
+    <li>{{studentData.age}}</li>
+    <li>{{studentData.hobby}}</li>
+</ol>
+
+
+
+</div>
+
+<div *ngIf="imgshowhide">
+    <img src="good-morning.gif" alt="gm photo">
+</div>
+
+<button (click)="showimg()">showimg</button>&nbsp;
+<button (click)="hideimg()">hideimg</button>&nbsp;
+<button (click)="toggleimg()">togglemg</button>&nbsp;
+
+<div [ngSwitch]="color"> <!---ngSwitch directives--->
+    <h3 *ngSwitchCase="'yellow'">yellow</h3>
+    <h3 *ngSwitchCase="'pink'">pink</h3>
+    <h3 *ngSwitchCase="'green'">green</h3>
+    <h3 *ngSwitchCase="'blue'">blue</h3> 
+    <h3 *ngSwitchDefault="">default case</h3> <!--if not match then execuitngswitchdefault---->
+</div>
+
+<button (click)="switchfun('yellow')">yelllow</button>
+<button (click)="switchfun1('pink')">pink</button>
+<!---ATTRUBITE DIRECTIVES:
+Attribute Directives: Attribute directives are used to change the look and behavior of the DOM elements. For example: ngClass directive, and ngStyle directive etc.
+
+ngClass Directive: The ngClass directive is used to add or remove CSS classes to an HTML element.
+ngStyle Directive: The ngStyle directive facilitates you to modify the style of an HTML element using the expression. You can also use ngStyle directive to dynamically change the style of your HTML element.
+-->
+
+<div [ngClass]="styleProperty ? styleProperty : 'main'">  <!---ngClass attribute directves-->
+
+</div>
+
+<div [ngClass]="stylePropertyNew ? 'main':'main2'">
+
+</div>
+
+<!-----multiple style apply-->
+<div [class.main]="styleMultiple=='vaibhav'" [class.main2]="styleMultiple=='sanjay'"
+     [class.main3]="styleMultiple=='kabade'">
+
+</div>
