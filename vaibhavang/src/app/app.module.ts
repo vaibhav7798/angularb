@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeModule } from './home/home.module';
 import { ContactusModule } from './contactus/contactus.module';
 import { HeaderComponent } from './header/header.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [  //component+directives+pipes
@@ -18,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
     DataBindingComponent,
     PageNotFoundComponent,
     HeaderComponent,
+    DirectivesComponent,
   ],
   imports: [ //modules
     BrowserModule,

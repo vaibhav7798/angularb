@@ -12,7 +12,8 @@ export class LandingComponent {
   data:any;
   fruits!:any;
   fruits1!:any;
-  
+  studentName1?:string;
+
   constructor(private dataService:DataService)
  {
 
@@ -32,5 +33,27 @@ export class LandingComponent {
  setData()
  {
    this.fruits1=this.dataService.fruits="orange";
- }
+  }
+
+  getStudentName()
+  {
+    this.studentName1=this.dataService.getStudentName();
+   console.log(this.studentName1);
+  }
+
+  setstudentname()
+  { 
+    let studentname='rahul';
+    this.dataService.setStudentName(studentname);
+    console.log(this.dataService.studentName);
+    
+  }
+ 
+  multiplication()
+  { 
+    let res=this.dataService.multiplication(20,30);
+    console.log("multiplicatin is:"+res);
+    
+  }
+
 }
