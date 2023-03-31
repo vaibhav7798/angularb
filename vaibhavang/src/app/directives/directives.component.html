@@ -51,17 +51,39 @@ Attribute Directives: Attribute directives are used to change the look and behav
 ngClass Directive: The ngClass directive is used to add or remove CSS classes to an HTML element.
 ngStyle Directive: The ngStyle directive facilitates you to modify the style of an HTML element using the expression. You can also use ngStyle directive to dynamically change the style of your HTML element.
 -->
-
+<!---IMP--->
 <div [ngClass]="styleProperty ? styleProperty : 'main'">  <!---ngClass attribute directves-->
-
+   property 
 </div>
 
+<!---IMP--->
 <div [ngClass]="stylePropertyNew ? 'main':'main2'">
-
+  number
 </div>
 
-<!-----multiple style apply-->
+<div [ngClass]="function()">
+  function ng class
+</div>
+
+<!---IMP--multiple style apply-->
 <div [class.main]="styleMultiple=='vaibhav'" [class.main2]="styleMultiple=='sanjay'"
      [class.main3]="styleMultiple=='kabade'">
+ multiple class bind
+</div>
 
+<!----inline css for use ngstyle--->
+
+<p [ngStyle]="{'color':inlineCss=='orange'?inlineCss:'blue'}">vaibhav</p>
+<p [ngStyle]="{'color':inlineCss1=='orange'?inlineCss1:'green'}">kabade</p>
+
+
+<div>
+    <h1 [class.main]="headingProperty"
+        [class.main2]="!headingProperty">
+        heading 1
+    </h1>
+
+    <h2>
+        heading
+    </h2>
 </div>

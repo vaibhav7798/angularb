@@ -11,6 +11,8 @@ import { HomeModule } from './home/home.module';
 import { ContactusModule } from './contactus/contactus.module';
 import { HeaderComponent } from './header/header.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { CharactersonlyDirective } from './charactersonly.directive';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [  //component+directives+pipes
@@ -20,6 +22,8 @@ import { DirectivesComponent } from './directives/directives.component';
     PageNotFoundComponent,
     HeaderComponent,
     DirectivesComponent,
+    CharactersonlyDirective,
+    FormsComponent,
   ],
   imports: [ //modules
     BrowserModule,

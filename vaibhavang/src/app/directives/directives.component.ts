@@ -84,4 +84,15 @@ styleProperty="main2";
 stylePropertyNew=555;
 
 styleMultiple='kabade'; //multiplestyple apply
+
+function()
+{
+return 'main2';
+}
+
+inlineCss='orange';
+inlineCss1='oran';
+
+headingProperty=2326;
+
 }
