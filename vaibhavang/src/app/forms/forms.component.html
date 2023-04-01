@@ -1,4 +1,40 @@
 <p>forms works!</p>
 <form >
-    Enter Your Name: <input type="text" appCharactersonly>
-</form>
+    Enter Your Name: <input type="text" appCharactersonly><br>
+   
+    <h2>{{title | uppercase}}</h2> <!----pipes for transform---> 
+    <h2>{{title1 | lowercase}}</h2>
+    <h2>{{title | titlecase}}</h2>
+    <p> {{todayDate | date}}</p><!----default-->
+    <P>{{todayDate | date :"MM/dd/yyyy"}}</P> <!---custom-->
+    <p>{{today}}</p> <!--todat date and time--->
+   
+  
+   <input type="text" [(ngModel)]="inputTextBox" [ngModelOptions]="{standalone: true}">
+   <br>
+  
+    <table class="tablemain" >
+        <tr>
+         <th>empname</th>
+        <th>age</th>
+        <th>add</th> 
+        </tr>
+
+        <tr *ngFor="let emprec of employeeData | searchtext : inputTextBox">
+        <td>{{emprec.name}}</td>
+         <td>{{emprec.age}}</td>
+         <td>{{emprec.add}}</td>
+         </tr>
+    </table>
+    
+    <br>
+    <input type="text" [(ngModel)]="amount" [ngModelOptions]="{standalone:true}">  <!---If ngModel is used within a form tag, either the name attribute must be set or the form
+                                                control must be defined as 'standalone' in ngModelOptions.-->
+    <!-- {{amount | currency}} ---static-->
+    &#8377;{{amount | currency:amount}}  <!------dynamic-->
+  <br><br>
+Number Only:<input type="text" appNumbersonly>
+    
+</form><br><br>
+
+

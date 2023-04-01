@@ -22,7 +22,8 @@ const routes: Routes = [
  {path:'aboutus-module',loadChildren:()=>import('./aboutus/aboutus.module').then(mod=>mod.AboutusModule)},
 { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
 
-{path:'testModule',loadChildren:()=>import('./test/test.module').then(mod=>mod.TestModule)}
+{path:'testModule',loadChildren:()=>import('./test/test.module').then(mod=>mod.TestModule)},
+ {path:'angularformsmodule', loadChildren:()=>import('./angularforms/angularforms.module').then(mod=>mod.AngularformsModule)},
 ];
 
 @NgModule({

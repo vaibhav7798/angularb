@@ -1,9 +1,9 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appCharactersonly]'
+  selector: '[appNumbersonly]'
 })
-export class CharactersonlyDirective {
+export class NumbersonlyDirective {
 
   constructor(private elementRef : ElementRef) { }
 @HostListener('input',["$event"])
@@ -11,8 +11,10 @@ export class CharactersonlyDirective {
 onInputBoxChange(event:any)
 {
   console.log(event);
-  
+   console.log("numbers only directive..");
+   
     var inputBoxInitialValue=this.elementRef.nativeElement.value;   
-     this.elementRef.nativeElement.value=inputBoxInitialValue.replace(/[^a-zA-Z]*/g, '');
+     this.elementRef.nativeElement.value=inputBoxInitialValue.replace(/[^0-9]*/g, '');
     }
+
 }

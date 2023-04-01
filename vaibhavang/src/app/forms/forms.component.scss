@@ -1,0 +1,13 @@
+.tablemain
+{
+    border: 1px solid red;
+    background-color: pink;
+    border-collapse: collapse;
+}
+
+tr,td,th
+{
+    border: 2px solid green;
+    border-collapse: collapse;
+    padding: 3px;
+}

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AboutusRoutingModule } from './aboutus-routing.module';
 import { AboutuslandingComponent } from './aboutuslanding/aboutuslanding.component';
 import { AboutusdetailsComponent } from './aboutusdetails/aboutusdetails.component';
+import { SharedModule } from '../shared/shared.module';
 
 console.log("abbout us module...");
 
@@ -15,7 +16,8 @@ console.log("abbout us module...");
   ],
   imports: [
     CommonModule,
-    AboutusRoutingModule
+    AboutusRoutingModule,
+    SharedModule
   ]
 })
 export class AboutusModule { }
