@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharactersonlyDirective } from '../charactersonly.directive';
 import { NumbersonlyDirective } from '../angularforms/numbersonly.directive';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { NumbersonlyDirective } from '../angularforms/numbersonly.directive';
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     CharactersonlyDirective,

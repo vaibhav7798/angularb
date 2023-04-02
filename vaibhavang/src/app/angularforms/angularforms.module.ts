@@ -5,6 +5,7 @@ import { AngularformsRoutingModule } from './angularforms-routing.module';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     AngularformsRoutingModule,
     SharedModule,
+    FormsModule
   ]
 })
 export class AngularformsModule { }

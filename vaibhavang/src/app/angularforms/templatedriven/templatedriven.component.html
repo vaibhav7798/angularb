@@ -1,3 +1,20 @@
-<p>templatedriven works!</p>
-Name:<input type="text" appCharactersonly>
-Number: <input type="text" appNumbersonly>
+<!-- <p>templatedriven works!</p> -->
+<!-- Name:<input type="text" appCharactersonly>
+Number: <input type="text" appNumbersonly> -->
+
+<!-- <p>template driven form</p> -->
+ 
+<form #loginForm="ngForm" autocomplete="off">
+    <h2>Heading Form</h2>
+    <!-- <label>Enter Your Full Name:</label><br>--->
+    <input type="text" ngModel name="fullname"  #fullname="ngModel"  placeholder="enter a name" required minlength="5"><br>
+    <span *ngIf="!fullname.touched">Hit:Enter A Full Name</span><br>
+    <span class="error" *ngIf="fullname.touched && fullname.errors?.['required']">Name is required</span><br><br>
+    <span class="error"  *ngIf="fullname.errors?.['minlength']">Enter At List 5 Characters</span> 
+    <br>
+    <!-- <label>Enter A Password:</label><br>--->
+    <input type="text" ngModel name="password" placeholder="enter a password"><br>
+    <span>Enter A Password</span><br>
+    <button (click)="submit(loginForm.value)">Submit</button>
+
+</form>

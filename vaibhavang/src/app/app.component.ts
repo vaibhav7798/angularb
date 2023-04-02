@@ -39,4 +39,8 @@ export class AppComponent {
     this.router.navigateByUrl('aboutus-module/aboutusdetails');
   }
 
+  templateDrivenForm()
+  {
+    this.router.navigateByUrl('/angularformsmodule/templatedriven');
+  }
 }
