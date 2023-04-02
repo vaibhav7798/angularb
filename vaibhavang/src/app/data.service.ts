@@ -18,6 +18,7 @@ export class DataService {
 //alternate way to get and set data to services
 
 studentName='raj';
+  formFullName!: any;
 
 getStudentName()
 {
