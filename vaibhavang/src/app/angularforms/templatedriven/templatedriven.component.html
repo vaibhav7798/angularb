@@ -7,10 +7,12 @@ Number: <input type="text" appNumbersonly> -->
 <form #loginForm="ngForm" autocomplete="off">
     <h2>Heading Form</h2>
     <!-- <label>Enter Your Full Name:</label><br>--->
-    <input type="text" ngModel name="fullname"  #fullname="ngModel"  placeholder="enter a name" required minlength="5"><br>
-    <span *ngIf="!fullname.touched">Hit:Enter A Full Name</span><br>
-    <span class="error" *ngIf="fullname.touched && fullname.errors?.['required']">Name is required</span><br><br>
+    <input type="text" ngModel name="fullname"  #fullname="ngModel" pattern="[A-Za-z]*$" placeholder="enter a name" required minlength="5"><br>
+    <!--<span *ngIf="!fullname.touched">Hit:Enter A Full Name</span><br>--->
+    <span>Hit:Enter A Full Name</span>
+    <span class="error" *ngIf="fullname.touched && fullname.errors?.['required'] && !fullname.valid">Name is required</span><br>
     <span class="error"  *ngIf="fullname.errors?.['minlength']">Enter At List 5 Characters</span> 
+    <span class="error1" *ngIf="fullname.touched && !fullname.valid && fullname.errors?.['pattern'] &&!fullname.errors?.['minlength']">Name Is Invalid</span>
     <br>
     <!-- <label>Enter A Password:</label><br>--->
     <input type="text" ngModel name="password" placeholder="enter a password"><br>
