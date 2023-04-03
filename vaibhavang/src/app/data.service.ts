@@ -36,4 +36,15 @@ setStudentName(studentname:string)
  }
 constructor() { }
 
+
+wordValidators(inputBoxValue:any) //this function will call when component load
+{
+ console.log('.....',inputBoxValue.value);
+    let inputData=inputBoxValue.value?.toLowerCase(); 
+ console.log('inputdata',inputData);
+  let isInclude=inputData?.includes('title'); //includes method return true or false
+  console.log('isInclude',isInclude);
+  return isInclude ? {isvalid : true} :null;    
+}
+
 }

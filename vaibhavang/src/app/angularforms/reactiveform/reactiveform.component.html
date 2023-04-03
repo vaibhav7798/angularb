@@ -29,7 +29,14 @@
         *ngIf="studentdataForm.get('mobno')?.errors?.['maxlength'] && !studentdataForm.get('mobno')?.errors?.['pattern']">max
         length is 10 digit</span><br>
 
+        <label>password</label>
+       <input [type]="showPassword ? 'text':'password'"><span><button (click)="showPasswordfunction()">show</button></span>
+<br><br>
 
-    <input type="checkbox" formControlName="tnc">Please Accept Term And Condiction
+      <label>title</label>
+      <input type="text" formControlName="title"><br>    
+    <span class="error" *ngIf="studentdataForm.get('title')?.touched && studentdataForm.get('title')?.errors?.['isvalid']">title word is not acceptble as input</span><br>
+
+      <input type="checkbox" formControlName="tnc">Please Accept Term And Condiction
     <button [disabled]="studentdataForm.invalid" (click)="submit()">submit</button>
 </form>
