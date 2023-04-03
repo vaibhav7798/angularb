@@ -1,18 +1,35 @@
 <p>reactiveform works!!</p>
 
-<form [formGroup]="studentdataForm">  <!---here form name is studentdataForm--->
- <label>Name</label>
- <input type="text" formControlName="name"><br>
- <span class="error"
-         *ngIf="studentdataForm.get('name')?.touched
+<form [formGroup]="studentdataForm"> <!---here form name is studentdataForm--->
+    <label>firstName<span *ngIf="studentdataForm.get('name')?.touched
+    && studentdataForm.get('name')?.errors?.['required']" class="error">*</span> </label>
+    <input type="text" formControlName="name"><br>
+    <span class="error" *ngIf="studentdataForm.get('name')?.touched
          && studentdataForm.get('name')?.errors?.['required']">Name Is Required</span><br>
- <span class="error" *ngIf="studentdataForm.get('name')?.touched
-        && studentdataForm.get('name')?.errors?.['minlength']">AtLeast 5 Characters Expected</span><br>        
- <label>Mob No</label>
- <input type="text" formControlName="mobno"><br>
- <span class="error"
-   *ngIf="studentdataForm.get('mobno')?.errors?.['pattern']">Pattern Not Matched</span><br> 
- 
- <input type="checkbox" formControlName="tnc">Please Accept Term And Condiction 
-   <button [disabled]="studentdataForm.invalid" (click)="submit()">submit</button>
-</form>  
+    <span class="error" *ngIf="studentdataForm.get('name')?.touched
+        && studentdataForm.get('name')?.errors?.['minlength']">AtLeast 5 Characters Expected</span><br>
+
+    <label>lastName<span *ngIf="studentdataForm.get('lastname')?.touched
+            && studentdataForm.get('lastname')?.errors?.['required']" class="error">*</span> </label>
+    <input type="text" formControlName="lastname"><br><br>
+    <span class="error" *ngIf="(studentdataForm.get('lastname')?.touched 
+        || studentdataForm.get('lastname')?.dirty)  
+        && studentdataForm.get('lastname')?.errors?.['pattern']">please match pattern</span><br>
+    <!--?.dirty--mean--something write-->
+    <span class="error"
+        *ngIf="studentdataForm.get('lastname')?.touched && studentdataForm.get('lastname')?.errors?.['required']">lastname
+        is required</span><br>
+
+    <label>Mob No</label>
+    <input type="text" formControlName="mobno"><br>
+    <span class="error"
+        *ngIf="studentdataForm.get('mobno')?.errors?.['pattern'] && !studentdataForm.get('mobno')?.errors?.['maxlength']">Pattern
+        Not Matched</span><br>
+    <span class="error"
+        *ngIf="studentdataForm.get('mobno')?.errors?.['maxlength'] && !studentdataForm.get('mobno')?.errors?.['pattern']">max
+        length is 10 digit</span><br>
+
+
+    <input type="checkbox" formControlName="tnc">Please Accept Term And Condiction
+    <button [disabled]="studentdataForm.invalid" (click)="submit()">submit</button>
+</form>

@@ -26,8 +26,9 @@ studentForm()
   this.studentdataForm=this.formBuillder.group({
   // name:['vaibhav'],
   name:['',[Validators.required,Validators.minLength(5)]],
-   mobno:['',[Validators.required,Validators.pattern("[0-9]*$")]],
-   tnc:['',[]]
+   mobno:['',[Validators.required,Validators.pattern("[0-9]*$"),Validators.maxLength(10)]],
+   tnc:[true,[Validators.requiredTrue]],
+   lastname:['',[Validators.required,Validators.pattern("[a-zA-Z]*$")]]
   });
 }
 submit()
