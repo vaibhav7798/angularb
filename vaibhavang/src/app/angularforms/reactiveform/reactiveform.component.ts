@@ -13,7 +13,12 @@ export class ReactiveformComponent {
 
  studentdataForm!:FormGroup;   //here studentdataForm is property name and FormGroup is datatype  
  showPassword:boolean=false;
- constructor(private formBuillder:FormBuilder,private dataService:DataService)
+cities=['mumbai','pune','nashik','nagpur'];
+password!:any;
+confirmpassword!:any;
+isMatched:boolean=false 
+
+constructor(private formBuillder:FormBuilder,private dataService:DataService)
 {
   
 }
@@ -31,9 +36,44 @@ studentForm()
    mobno:['',[Validators.required,Validators.pattern("[0-9]*$"),Validators.maxLength(10)]],
    tnc:[true,[Validators.requiredTrue]],
    lastname:['',[Validators.required,Validators.pattern("[a-zA-Z]*$")]],
-   title:['',[Validators.required,this.dataService.wordValidators]]
+   title:['',[Validators.required,this.dataService.wordValidators]],
+   city:[''],
+   password:['',],
+   confirmpassword:['']
   });
 }
+
+passwordvalidation(inputboxpassword:any)
+{
+
+  
+  console.log('pass',inputboxpassword.target.value);
+  this.password=inputboxpassword.target.value; 
+   
+  if(this.password==this.confirmpassword)
+  {
+     this.isMatched=false;//pass matched
+  }
+  else
+  {
+   this.isMatched=true;//pass not matched
+  }
+
+}
+
+confirmpasswordvalidation1(confirmpassword:any)
+{
+   this.confirmpassword=confirmpassword.target.value;
+   if(this.password==this.confirmpassword)
+   {
+      this.isMatched=false;//pass matched
+   }
+   else
+   {
+    this.isMatched=true;//pass not matched
+   }
+  }
+
 submit()
 {
   console.log(this.studentdataForm.value);

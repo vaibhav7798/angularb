@@ -29,9 +29,32 @@
         *ngIf="studentdataForm.get('mobno')?.errors?.['maxlength'] && !studentdataForm.get('mobno')?.errors?.['pattern']">max
         length is 10 digit</span><br>
 
-        <label>password</label>
-       <input [type]="showPassword ? 'text':'password'"><span><button (click)="showPasswordfunction()">show</button></span>
+  <label>City</label>
+  <select formControlName="city">
+    <!-- <option value="mumbai">mumbai</option>
+    <option value="pune">pune</option>
+    <option value="nashik">nashik</option>
+    <option value="nagpur">nagpur</option>--->
+  
+     <option *ngFor=" let city of cities" [value]="city">{{city}}</option>
+
+</select> <br><br>
+
+
+        <label>password</label>  <!----either-(keyup)="passwordvalidation($event)"------(blur)="passwordvalidation($event)"--both valid-->
+       <input [type]="showPassword ? 'text':'password'" formControlName="password" (keyup)="passwordvalidation($event)">
+       <span><button (click)="showPasswordfunction()">show</button></span>
+       <span class="error" *ngIf="isMatched">password not matched</span>
+       <br><br>
+ 
+<label>confirm password</label>
+<input [type]="showPassword ? 'text':'password'" formControlName="confirmpassword" (keyup)="confirmpasswordvalidation1($event)">
+<span><button (click)="showPasswordfunction()">show</button></span><br>
+ <span class="error" *ngIf="isMatched">password not matched</span>
 <br><br>
+
+
+
 
       <label>title</label>
       <input type="text" formControlName="title"><br>    
