@@ -9,9 +9,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UserComponent } from './user/user.component';
 import { ApplicationlandingComponent } from './applicationlanding/applicationlanding.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { LifecyclehooksparentComponent } from './lifecyclehooksparent/lifecyclehooksparent.component';
 
 const routes: Routes = [
-  {path:'', component : AppLandingComponent},
+  //{path:'', component : AppLandingComponent},
+  {path:'', component :ApplicationlandingComponent},
   {path:'user', component : UserComponent},
 {path:'dataBinding',component:DataBindingComponent},
 //{path:'**',component:PageNotFoundComponent}//wlid/universal card routing
@@ -20,7 +23,9 @@ const routes: Routes = [
  {path:'directives',component:DirectivesComponent}, 
  {path:'forms',component:FormsComponent},
  {path:'applicationlanding',component:ApplicationlandingComponent},
-
+ {path:'lifecyclehooks',component:LifecyclehooksComponent},
+ {path:'lifecyclehooksparent',component:LifecyclehooksparentComponent},
+ 
 
  //lazy loading
  {path:'home-module',loadChildren :()=>import('./home/home.module').then(mod=>mod.HomeModule)},

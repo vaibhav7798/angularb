@@ -18,6 +18,8 @@ import { CurrencyPipe } from './currency.pipe';
 import { SharedModule } from './shared/shared.module';
 import { ApplicationlandingComponent } from './applicationlanding/applicationlanding.component';
 import { AppLandingComponent } from './app-landing/app-landing.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { LifecyclehooksparentComponent } from './lifecyclehooksparent/lifecyclehooksparent.component';
 
 @NgModule({
   declarations: [  //component+directives+pipes
@@ -33,6 +35,8 @@ import { AppLandingComponent } from './app-landing/app-landing.component';
     CurrencyPipe,
     ApplicationlandingComponent,
     AppLandingComponent,
+    LifecyclehooksComponent,
+    LifecyclehooksparentComponent,
   ],
   imports: [ //modules
     BrowserModule,
