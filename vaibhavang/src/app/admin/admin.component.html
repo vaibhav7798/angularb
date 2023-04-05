@@ -4,5 +4,20 @@
 <div class="container">
 <p>admin child component</p>
 {{cname}} <br><br>
-{{fruits}}
+{{fruits}} <br><br><br>
+chlid data (fav fruits):<input type="text" (keyup)="favFruits($event)"><br>
+
+</div>
+
+<div class="container1">
+    <table *ngIf="table">
+        <tr>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr *ngFor="let tabledata of table">
+          <td>{{tabledata.name}}</td>
+          <td>{{tabledata.age}}</td>
+      </tr>
+    </table>
 </div>

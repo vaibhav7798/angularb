@@ -9,9 +9,13 @@
     1:paraent child data transfer @Input() decorter use
     2:chlid paraent data transfer @Output() decorater use---->
 <div class="container">
-Enter City:<input type="text" (keyup)="parentData($event)">
+Enter City:<input type="text" (keyup)="parentData($event)"><br>
+<h3>{{dataFromChild}}</h3>
+
+
 </div>
 
-<app-admin [cname]="parentCityName" [fruits]="fruits"></app-admin>
+<app-admin [cname]="parentCityName" [fruits]="fruits" (childdata)="getChildData($event)"
+[table]="parenttable"></app-admin>
 
 <app-adminchild2 [citynamechild2]="parentCityName" [cars]="car"></app-adminchild2>
