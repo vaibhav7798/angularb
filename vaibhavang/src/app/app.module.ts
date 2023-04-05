@@ -16,6 +16,8 @@ import { FormsComponent } from './forms/forms.component';
 import { SearchtextPipe } from './searchtext.pipe';
 import { CurrencyPipe } from './currency.pipe';
 import { SharedModule } from './shared/shared.module';
+import { ApplicationlandingComponent } from './applicationlanding/applicationlanding.component';
+import { AppLandingComponent } from './app-landing/app-landing.component';
 
 @NgModule({
   declarations: [  //component+directives+pipes
@@ -29,6 +31,8 @@ import { SharedModule } from './shared/shared.module';
     FormsComponent,
     SearchtextPipe,
     CurrencyPipe,
+    ApplicationlandingComponent,
+    AppLandingComponent,
   ],
   imports: [ //modules
     BrowserModule,

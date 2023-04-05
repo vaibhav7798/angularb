@@ -1,0 +1,17 @@
+<p>-----admin-parent...!</p>
+
+<!--- data transmission technique in angular:
+    if componenet dont have relation:
+    1:using -service-
+    2:viewChild
+    3:subjects(imp)
+    if componment isb having relation between then
+    1:paraent child data transfer @Input() decorter use
+    2:chlid paraent data transfer @Output() decorater use---->
+<div class="container">
+Enter City:<input type="text" (keyup)="parentData($event)">
+</div>
+
+<app-admin [cname]="parentCityName" [fruits]="fruits"></app-admin>
+
+<app-adminchild2 [citynamechild2]="parentCityName" [cars]="car"></app-adminchild2>

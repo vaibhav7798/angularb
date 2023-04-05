@@ -7,15 +7,20 @@ import { HomeComponent } from './home/home/home.component';
 import { LandingComponent } from './home/landing/landing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserComponent } from './user/user.component';
+import { ApplicationlandingComponent } from './applicationlanding/applicationlanding.component';
+import { AppLandingComponent } from './app-landing/app-landing.component';
 
 const routes: Routes = [
-{path:'user', component : UserComponent},
+  {path:'', component : AppLandingComponent},
+  {path:'user', component : UserComponent},
 {path:'dataBinding',component:DataBindingComponent},
 //{path:'**',component:PageNotFoundComponent}//wlid/universal card routing
  {path:'HomeModule_home',component:HomeComponent},
  {path:'HomeModule_landing',component:LandingComponent},
  {path:'directives',component:DirectivesComponent}, 
  {path:'forms',component:FormsComponent},
+ {path:'applicationlanding',component:ApplicationlandingComponent},
+
 
  //lazy loading
  {path:'home-module',loadChildren :()=>import('./home/home.module').then(mod=>mod.HomeModule)},

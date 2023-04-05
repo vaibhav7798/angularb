@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { DataService } from '../data.service';
 @Component({
   selector: 'app-admin',
@@ -8,9 +8,15 @@ import { DataService } from '../data.service';
 export class AdminComponent {
    carName!:string;
   
+   @Input() cname:any;
+   @Input() fruits:any;
+
+
+
+
+
    constructor(private dataService:DataService)
   {
-
   }
 
 
