@@ -1,6 +1,6 @@
 <p>reactiveform works!!</p>
 
-<form [formGroup]="studentdataForm"> <!---here form name is studentdataForm--->
+<form class="maincontainer" [formGroup]="studentdataForm"> <!---here form name is studentdataForm--->
     <label>firstName<span *ngIf="studentdataForm.get('name')?.touched
     && studentdataForm.get('name')?.errors?.['required']" class="error">*</span> </label>
     <input type="text" formControlName="name"><br>
@@ -61,5 +61,5 @@
     <span class="error" *ngIf="studentdataForm.get('title')?.touched && studentdataForm.get('title')?.errors?.['isvalid']">title word is not acceptble as input</span><br>
 
       <input type="checkbox" formControlName="tnc">Please Accept Term And Condiction
-    <button [disabled]="studentdataForm.invalid" (click)="submit()">submit</button>
+   <br> <button [disabled]="studentdataForm.invalid" (click)="submit()">submit</button>
 </form>

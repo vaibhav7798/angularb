@@ -34,16 +34,58 @@
       "confirmpassword": "rakesh@123",
       "id": 1
     },
-    
-      {
-        "name": "rani",
-        "city": "khandwa",
-        "mobno": 124512451245,
-        "password": "rani@123",
-        "confirmpassword": "rani@123",
-        "id": 1
-      }
-    
+    {
+      "name": "rani",
+      "city": "khandwa",
+      "mobno": 124512451245,
+      "password": "rani@123",
+      "confirmpassword": "rani@123",
+      "id": 1
+    },
+    {
+      "name": "vaibhav",
+      "mobno": "7798530084",
+      "tnc": true,
+      "lastname": "kabade",
+      "title": "Test",
+      "city": "mumbai",
+      "password": "Vaibhav@123",
+      "confirmpassword": "Vaibhav@123",
+      "id": 2
+    },
+    {
+      "name": "swapnil",
+      "mobno": "7798530084",
+      "tnc": true,
+      "lastname": "kabade",
+      "title": "TEST",
+      "city": "nashik",
+      "password": "swapnil@123",
+      "confirmpassword": "swapnil@123",
+      "id": 3
+    },
+    {
+      "name": "swapnil1",
+      "mobno": "7798530084",
+      "tnc": true,
+      "lastname": "kabade",
+      "title": "TEST",
+      "city": "nashik",
+      "password": "swapnil@123",
+      "confirmpassword": "swapnil@123",
+      "id": 4
+    },
+    {
+      "name": "swapnil",
+      "mobno": "7798530084",
+      "tnc": true,
+      "lastname": "kabade",
+      "title": "TEST",
+      "city": "nashik",
+      "password": "swapnil@123",
+      "confirmpassword": "swapnil@123",
+      "id": 5
+    }
   ],
   "owner": [
     {

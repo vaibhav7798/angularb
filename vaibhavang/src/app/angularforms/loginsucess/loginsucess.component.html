@@ -2,4 +2,31 @@
  <h2>WelCome!{{userName}}</h2>
  <button (click)="getUserData()">login</button>
  
- 
+ <h3>table data intepolate from get api</h3>
+   <!----{{userdata}}-----> 
+ <div>
+   <table class="table">
+        <tr> 
+            <th>name</th>
+            <th>city</th>
+            <th>mobno</th>
+            <th>pasword</th>
+            <th>confirmpasword</th>
+        </tr>
+
+      <tr *ngFor="let userrec of userdata">
+        <td>{{userrec.name}}</td>
+        <td>{{userrec.city}}</td>
+        <td>{{userrec.mobno}}</td>
+        <td>{{userrec.password}}</td>
+        <td>{{userrec.confirmpassword}}</td>
+     </tr>        
+</table>
+
+ </div>
+
+
+ <h3>hotel data showed</h3>
+ <ul *ngFor="let userhoteldata of userhotel">
+    <li>{{userhoteldata.hotelname}}</li>
+ </ul>

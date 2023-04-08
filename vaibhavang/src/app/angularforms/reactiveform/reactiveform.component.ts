@@ -3,6 +3,7 @@ import { FormGroup, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { DataService } from 'src/app/data.service';
+import { CommonApiCallService } from '../common-api-call.service';
 @Component({
   selector: 'app-reactiveform',
   templateUrl: './reactiveform.component.html',
@@ -17,8 +18,8 @@ cities=['mumbai','pune','nashik','nagpur'];
 password!:any;
 confirmpassword!:any;
 isMatched:boolean=false 
-
-constructor(private formBuillder:FormBuilder,private dataService:DataService)
+ 
+constructor(private formBuillder:FormBuilder,private dataService:DataService,private commonApiCallService:CommonApiCallService)
 {
   
 }
@@ -76,7 +77,11 @@ confirmpasswordvalidation1(confirmpassword:any)
 
 submit()
 {
-  console.log(this.studentdataForm.value);
+  console.log('Form Data',this.studentdataForm.value);
+ let endpoint="user";
+  this.commonApiCallService.postApiCall(endpoint,this.studentdataForm.value).subscribe(Response=>{
+          })
+
 }
 
 showPasswordfunction()

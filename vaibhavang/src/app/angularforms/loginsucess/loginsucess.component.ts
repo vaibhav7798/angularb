@@ -10,7 +10,11 @@ import { HttpClient } from '@angular/common/http';
 export class LoginsucessComponent {
    userName!:any;
    userdata:any;
-   url="http://localhost:3000/user";
+   userhotel:any;
+  // url="http://localhost:3000/user"; //static
+   endpoint='user';//dyanamic
+   endpoint1="hotelDetails";
+  subcibedata: any;
    constructor(private dataService:DataService,private commonApiCallService:CommonApiCallService,
               private http:HttpClient)
   {
@@ -26,11 +30,18 @@ export class LoginsucessComponent {
   // //  })
   // // 
      this.userName=this.dataService.formFullName;
-   }
+  
+  this.subcibedata=this.commonApiCallService.getApi(this.endpoint1).subscribe(Response=>{
+          this.userhotel=Response;
+          console.log(Response);
+           
+  })
+   }  
+    
 
    getUserData()
    {
-     this.commonApiCallService.getUser(this.url).subscribe(Response=>{
+     this.commonApiCallService.getUser(this.endpoint).subscribe(Response=>{
         this.userdata=Response;
         console.log('response',Response)
      })
@@ -40,6 +51,12 @@ export class LoginsucessComponent {
   //   console.log(response);
     //   }) 
   
-  }
+   
+    }
+
+    ngOnDestory()//this life cyle hook call at the last
+    {
+      this.subcibedata.unsubcribe();//to avoid memory lekeage problem we shoould have to unsubcribe.
+    }
 
 }
