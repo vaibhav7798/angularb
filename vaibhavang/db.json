@@ -1,0 +1,120 @@
+{
+  "admin": [
+    {
+      "name": "Pooja",
+      "city": "thane",
+      "mobno": 124512451245,
+      "password": "pooja@123",
+      "confirmpassword": "pooja@123",
+      "id": 1
+    }
+  ],
+  "user": [
+    {
+      "name": "vaibhav1",
+      "city": "mumbai1",
+      "mobno": 7798530084,
+      "password": "pass@123",
+      "confirmpassword": "pass@123",
+      "id": 1
+    },
+    {
+      "name": "sai",
+      "city": "nashik",
+      "mobno": 124512451245,
+      "password": "sai@123",
+      "confirmpassword": "sai@123",
+      "id": 1
+    },
+    {
+      "name": "rakesh",
+      "city": "manmad",
+      "mobno": 124512451245,
+      "password": "rakesh@123",
+      "confirmpassword": "rakesh@123",
+      "id": 1
+    },
+    
+      {
+        "name": "rani",
+        "city": "khandwa",
+        "mobno": 124512451245,
+        "password": "rani@123",
+        "confirmpassword": "rani@123",
+        "id": 1
+      }
+    
+  ],
+  "owner": [
+    {
+      "name": "vaibhav",
+      "city": "mumbai",
+      "mobno": 124512451245,
+      "password": "pass@123",
+      "confirmpassword": "pass@123",
+      "id": 1
+    },
+    {
+      "name": "pawan",
+      "city": "kalyan",
+      "mobno": 124512451245,
+      "password": "pawan@123",
+      "confirmpassword": "pawan@123",
+      "id": 2
+    },
+    {
+      "name": "aashish",
+      "city": "pune",
+      "mobno": 124512451245,
+      "password": "aashish@123",
+      "confirmpassword": "aashish@123",
+      "id": 3
+    }
+  ],
+  "hotelDetails": [
+    {
+      "hotelname": "sayaji",
+      "city": "csmt",
+      "hotelmbnomobno": 124512451245,
+      "roomavailable": "yes",
+      "hotelmenu": "panir tikka",
+      "checkintime": "10.00am",
+      "checkouttime": "05.00pm",
+      "t&c": true,
+      "id": 1
+    },
+    {
+      "hotelname": "oberoy",
+      "city": "ltt",
+      "hotelmbnomobno": 124512451245,
+      "roomavailable": "yes",
+      "hotelmenu": "panir tikka",
+      "checkintime": "10.00am",
+      "checkouttime": "05.00pm",
+      "t&c": true,
+      "id": 2
+    },
+    {
+      "hotelname": "taj",
+      "city": "mumbai",
+      "hotelmbnomobno": 124512451245,
+      "roomavailable": "yes",
+      "hotelmenu": "panir masala",
+      "checkintime": "10.00am",
+      "checkouttime": "05.00pm",
+      "t&c": true,
+      "id": 3
+    },
+    {
+      "hotelname": "rao",
+      "city": "mumbai",
+      "hotelmbnomobno": 124512451245,
+      "roomavailable": "yes",
+      "hotelmenu": "panir masala",
+      "checkintime": "10.00am",
+      "checkouttime": "05.00pm",
+      "t&c": true,
+      "id": 4
+    }
+  ]
+}

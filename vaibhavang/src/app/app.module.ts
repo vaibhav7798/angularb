@@ -20,6 +20,7 @@ import { ApplicationlandingComponent } from './applicationlanding/applicationlan
 import { AppLandingComponent } from './app-landing/app-landing.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { LifecyclehooksparentComponent } from './lifecyclehooksparent/lifecyclehooksparent.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [  //component+directives+pipes
@@ -37,12 +38,14 @@ import { LifecyclehooksparentComponent } from './lifecyclehooksparent/lifecycleh
     AppLandingComponent,
     LifecyclehooksComponent,
     LifecyclehooksparentComponent,
+    
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     SharedModule,
+    HttpClientModule
     //HomeModule,  //egarly loaded
     //ContactusModule,
   ],
