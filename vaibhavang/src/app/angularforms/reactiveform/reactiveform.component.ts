@@ -18,7 +18,7 @@ cities=['mumbai','pune','nashik','nagpur'];
 password!:any;
 confirmpassword!:any;
 isMatched:boolean=false 
- 
+boxvalue:any; 
 constructor(private formBuillder:FormBuilder,private dataService:DataService,private commonApiCallService:CommonApiCallService)
 {
   
@@ -78,10 +78,24 @@ confirmpasswordvalidation1(confirmpassword:any)
 submit()
 {
   console.log('Form Data',this.studentdataForm.value);
- let endpoint="user";
-  this.commonApiCallService.postApiCall(endpoint,this.studentdataForm.value).subscribe(Response=>{
+   console.log('mobile number',this.studentdataForm.value.mobno);//patch update mb no
+   
+ //way 1 let mobileno=this.studentdataForm.value.mobno;
+
+   let data={
+    mobno:this.studentdataForm.value.mobno,
+    name:this.studentdataForm.value.name
+   }
+
+  let endpoint="user";
+ this.commonApiCallService.postApiCall(endpoint,this.studentdataForm.value).subscribe(Response=>{
           })
 
+   //way 1 this.commonApiCallService.patchapicall('admin',{mobno:mobileno},2).subscribe(Response=>{
+      this.commonApiCallService.patchapicall('admin',data,2).subscribe(Response=>{
+
+
+    });      
 }
 
 showPasswordfunction()
@@ -100,5 +114,17 @@ showPasswordfunction()
 //   return isInclude ? {isvalid : true} :null;    
   //}
 
-
+  data(value:any)
+  {
+    console.log("input box value",value.target.value);
+  }
+  data1(value:any)
+  {
+    console.log("input box valu way 2",value);
+  }
+  data2()
+  { 
+   console.log("box value",this.boxvalue);
+   
+  }
 }

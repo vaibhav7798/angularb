@@ -7,6 +7,14 @@
       "password": "pooja@123",
       "confirmpassword": "pooja@123",
       "id": 1
+    },
+    {
+      "name": "rahul",
+      "city": "thane",
+      "mobno": "5555555554",
+      "password": "rahul@123",
+      "confirmpassword": "rahul@123",
+      "id": 2
     }
   ],
   "user": [
@@ -24,15 +32,7 @@
       "mobno": 124512451245,
       "password": "sai@123",
       "confirmpassword": "sai@123",
-      "id": 1
-    },
-    {
-      "name": "rakesh",
-      "city": "manmad",
-      "mobno": 124512451245,
-      "password": "rakesh@123",
-      "confirmpassword": "rakesh@123",
-      "id": 1
+      "id": 2
     },
     {
       "name": "rani",
@@ -40,7 +40,7 @@
       "mobno": 124512451245,
       "password": "rani@123",
       "confirmpassword": "rani@123",
-      "id": 1
+      "id": 4
     },
     {
       "name": "vaibhav",
@@ -51,7 +51,7 @@
       "city": "mumbai",
       "password": "Vaibhav@123",
       "confirmpassword": "Vaibhav@123",
-      "id": 2
+      "id": 5
     },
     {
       "name": "swapnil",
@@ -62,7 +62,7 @@
       "city": "nashik",
       "password": "swapnil@123",
       "confirmpassword": "swapnil@123",
-      "id": 3
+      "id": 6
     },
     {
       "name": "swapnil1",
@@ -73,7 +73,7 @@
       "city": "nashik",
       "password": "swapnil@123",
       "confirmpassword": "swapnil@123",
-      "id": 4
+      "id": 7
     },
     {
       "name": "swapnil",
@@ -84,7 +84,117 @@
       "city": "nashik",
       "password": "swapnil@123",
       "confirmpassword": "swapnil@123",
-      "id": 5
+      "id": 8
+    },
+    {
+      "name": "kailash",
+      "mobno": "9999999999",
+      "tnc": true,
+      "lastname": "jadhav",
+      "title": "demo",
+      "city": "nagpur",
+      "password": "Kailash@123",
+      "confirmpassword": "Kailash@123",
+      "id": 9
+    },
+    {
+      "name": "jivan",
+      "mobno": "9999999999",
+      "tnc": true,
+      "lastname": "jadhav",
+      "title": "demo",
+      "city": "nagpur",
+      "password": "jivan@123",
+      "confirmpassword": "jivan@123",
+      "id": 10
+    },
+    {
+      "name": "jivan",
+      "mobno": "9999999999",
+      "tnc": true,
+      "lastname": "jadhav",
+      "title": "demo",
+      "city": "nagpur",
+      "password": "jivan@123",
+      "confirmpassword": "jivan@123",
+      "id": 11
+    },
+    {
+      "name": "wwwwww",
+      "mobno": "0000000000",
+      "tnc": true,
+      "lastname": "yyyyyyyy",
+      "title": "demo",
+      "city": "pune",
+      "password": "Pass@123",
+      "confirmpassword": "Pass@123",
+      "id": 12
+    },
+    {
+      "name": "pravin",
+      "mobno": "1111111111",
+      "tnc": true,
+      "lastname": "gavni",
+      "title": "demo",
+      "city": "mumbai",
+      "password": "rrr",
+      "confirmpassword": "rrr",
+      "id": 13
+    },
+    {
+      "name": "pravin12",
+      "mobno": "6666666666",
+      "tnc": true,
+      "lastname": "gavani",
+      "title": "demo",
+      "city": "pune",
+      "password": "rrr",
+      "confirmpassword": "rrr",
+      "id": 14
+    },
+    {
+      "name": "pravin12",
+      "mobno": "6666666666",
+      "tnc": true,
+      "lastname": "gavani",
+      "title": "demo",
+      "city": "pune",
+      "password": "rrr",
+      "confirmpassword": "rrr",
+      "id": 15
+    },
+    {
+      "name": "pravin123",
+      "mobno": "1212121212",
+      "tnc": true,
+      "lastname": "g",
+      "title": "demo1",
+      "city": "mumbai",
+      "password": "rrr",
+      "confirmpassword": "rrr",
+      "id": 16
+    },
+    {
+      "name": "rahul",
+      "mobno": "4444444444",
+      "tnc": true,
+      "lastname": "g",
+      "title": "demo1",
+      "city": "mumbai",
+      "password": "rrr",
+      "confirmpassword": "rrr",
+      "id": 17
+    },
+    {
+      "name": "rahul",
+      "mobno": "5555555554",
+      "tnc": true,
+      "lastname": "h",
+      "title": "demo1",
+      "city": "mumbai",
+      "password": "rrr",
+      "confirmpassword": "rrr",
+      "id": 18
     }
   ],
   "owner": [

@@ -38,4 +38,16 @@ postApiCall(endpoint:any,data:any)
   return this.http.post(posturl,data);
 }
 
+deleteapicall(endpoint:any,id:any)
+{
+   let updateurl=this.url + endpoint +"/"+id;
+  return  this.http.delete(updateurl);
+}
+
+patchapicall(endpoint:string,data:any,id:number)
+{
+   let updateurl=this.url + endpoint +"/"+id;
+   return this.http.patch(updateurl,data);
+ }
+
 }
