@@ -1,7 +1,46 @@
 <p>loginsucess works!</p>
  <h2>WelCome!{{userName}}</h2>
  <button (click)="getUserData()">login</button>
- 
+
+ <form [formGroup]="matform">
+  <mat-form-field>
+    <mat-label>Name:</mat-label>
+    <input type="text" matInput formControlName="name">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+    <mat-hint>Please Enter name</mat-hint>
+    <mat-error *ngIf="matform.get('name')?.touched">Name Is Required</mat-error>
+  </mat-form-field>
+ <br>
+  <mat-form-field>
+    <mat-label>Mobile No:</mat-label>
+    <input type="text" matInput formControlName="mobno">
+    <mat-hint>Please Enter Mobile Number</mat-hint>
+    <mat-error *ngIf="matform.get('mobno')?.touched">Mobile No Is Required</mat-error>
+  </mat-form-field>
+ <br>
+ <mat-form-field>
+  <mat-label>Password:</mat-label>
+  <input type="text" matInput formControlName="password">
+  <mat-icon matSuffix (click)="visibility()">visibility</mat-icon>
+  <mat-hint>Enter Password Here </mat-hint>
+  <mat-error *ngIf="matform.get('mobno')?.touched">Password Is Required</mat-error>
+</mat-form-field>
+
+
+
+
+<br>
+  <button mat-raised-button color="primary" mat-button>submit</button>
+</form>
+
+
+
+
+
+
+
+
+
  <h3>table data intepolate from get api</h3>
    <!----{{userdata}}-----> 
  <div>

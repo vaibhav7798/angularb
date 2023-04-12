@@ -8,8 +8,10 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlphanumericDirective } from './alphanumeric.directive';
 import { LoginsucessComponent } from './loginsucess/loginsucess.component';
-
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     ReactiveformComponent,
@@ -22,7 +24,12 @@ import { LoginsucessComponent } from './loginsucess/loginsucess.component';
     AngularformsRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule,   
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
+  
   ]
 })
 export class AngularformsModule { }

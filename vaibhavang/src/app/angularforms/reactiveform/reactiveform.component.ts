@@ -125,6 +125,21 @@ showPasswordfunction()
   data2()
   { 
    console.log("box value",this.boxvalue);
-   
   }
+
+// putApi()
+// {
+//   let data={
+//     mobno:this.studentdataForm.value.mobno,
+//     name:this.studentdataForm.value.name,
+//     password:this.studentdataForm.value.password,   
+//     confirmpassword:this.studentdataForm.value.confirmpassword    
+//   }
+//   this.commonApiCallService.putapicall("admin",data,1).subscribe(Response=>{
+
+//   });
 }
+
+
+
+

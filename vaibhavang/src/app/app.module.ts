@@ -21,6 +21,7 @@ import { AppLandingComponent } from './app-landing/app-landing.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { LifecyclehooksparentComponent } from './lifecyclehooksparent/lifecyclehooksparent.component';
 import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [  //component+directives+pipes
@@ -45,7 +46,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
     //HomeModule,  //egarly loaded
     //ContactusModule,
   ],

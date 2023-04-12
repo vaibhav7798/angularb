@@ -5,6 +5,9 @@
 <input type="text" (keyup)="data($event)">  <!----way 1 --->
 <input type="text" #inputbox (keyup)="data1(inputbox.value)"><!----way 2-->
 <input type="text" [(ngModel)]="boxvalue"  (keyup)="data2()"><!-----way3-->
+<!-- <button (click)="putApi()">put api call</button> -->
+<button mat-raised-button color="accent">Accent</button><br>
+<!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
 
 <form class="maincontainer" [formGroup]="studentdataForm"> <!---here form name is studentdataForm--->
     <label>firstName<span *ngIf="studentdataForm.get('name')?.touched

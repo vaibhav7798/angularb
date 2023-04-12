@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { CommonApiCallService } from '../common-api-call.service';
 import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-loginsucess',
   templateUrl: './loginsucess.component.html',
@@ -15,8 +16,10 @@ export class LoginsucessComponent {
    endpoint='user';//dyanamic
    endpoint1="hotelDetails";
   subcibedata: any;
-   constructor(private dataService:DataService,private commonApiCallService:CommonApiCallService,
-              private http:HttpClient)
+  matform!:FormGroup;
+
+  constructor(private dataService:DataService,private commonApiCallService:CommonApiCallService,
+              private http:HttpClient,private fb:FormBuilder)
   {
    
   }
@@ -35,9 +38,25 @@ export class LoginsucessComponent {
           this.userhotel=Response;
           console.log(Response);
            
-  })
-   }  
+  });
+  this.matFormDef();
+}  
     
+matFormDef()
+{
+  this.matform=this.fb.group({
+   name:['',[Validators.required]],
+   mobno:['',[Validators.required]],
+   password:['',[Validators.required]]
+
+  })
+}
+
+visibility()
+{
+  console.log("visibility...");
+  
+}
 
    getUserData()
    {
